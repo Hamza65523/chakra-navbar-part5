@@ -15,12 +15,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
-        <nav>
+        <nav className="lg:hidden">
           <div className="flex px-4 py-2 justify-between">
             <img className="w-14" src="https://project03-navbar.vercel.app/logo.png" alt="" />
-          <div className="py-3" onClick={()=>setNav(!nav)}>
-            
-          
+          <div className="py-3" onClick={()=>setNav(!nav)}>       
             {nav?<FontAwesomeIcon icon={faXmark} className='w-4'/>:<FontAwesomeIcon icon={faBars} className='w-5'/>}
           </div>
             
@@ -38,16 +36,16 @@ const Home: NextPage = () => {
           </div>
           </ul>
         </nav>
-        {/* <nav>
-          <ul>
-            <li><img className="w-10" src="https://project03-navbar.vercel.app/logo.png" alt="" /></li>
-            <li>How it Works</li>
-            <li>Crypto</li>
-            <li>Marketplace</li>
-            <li>Sign In</li>
-            <li className="px-4 py-2 bg-black">Get Started</li>
+        <nav className="w-[80%] mx-auto my-0 py-4">
+          <ul className="flex justify-around items-center">
+            <li><img className="w-14" src="https://project03-navbar.vercel.app/logo.png" alt="" /></li>
+            <li className="font-[500]">How it Works</li>
+            <li className="font-[500]">Crypto</li>
+            <li className="font-[500]">Marketplace</li>
+            <li className="font-[500]">Sign In</li>
+            <li className="font-[500] px-4 py-2 bg-black rounded text-white">Get Started</li>
           </ul>
-        </nav> */}
+        </nav>
       </section>
     </div>
   );
